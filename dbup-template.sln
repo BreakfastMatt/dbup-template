@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{C64066AD-3D5D-4BDB-8441-C02D25AD90E9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dependencies", "Dependencies\Dependencies.csproj", "{63B27F85-F6EA-429D-8767-82FF3553CA27}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReleaseNotes", "ReleaseNotes", "{14142085-D958-46F4-BDAF-D43899714ABD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.0.0", "1.0.0", "{31ABDD25-4E4C-40BD-97C3-DFC3538A0DC3}"
+	ProjectSection(SolutionItems) = preProject
+		ReleaseNotes\1.0.0\ReleaseOverview.md = ReleaseNotes\1.0.0\ReleaseOverview.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{DD639927-088F-4CE2-BA0F-17092826C120}"
+	ProjectSection(SolutionItems) = preProject
+		ReleaseNotes\1.0.0\Scripts\script001 - test.sql = ReleaseNotes\1.0.0\Scripts\script001 - test.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.0.0", "2.0.0", "{E6B011AE-6DBE-476D-8099-B0A296F64E18}"
+	ProjectSection(SolutionItems) = preProject
+		ReleaseNotes\2.0.0\ReleaseOverview.md = ReleaseNotes\2.0.0\ReleaseOverview.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{1D7F1AAF-1EF8-4400-A596-6504E3DA2556}"
+	ProjectSection(SolutionItems) = preProject
+		ReleaseNotes\2.0.0\Scripts\script002 - modify table.sql = ReleaseNotes\2.0.0\Scripts\script002 - modify table.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C64066AD-3D5D-4BDB-8441-C02D25AD90E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C64066AD-3D5D-4BDB-8441-C02D25AD90E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C64066AD-3D5D-4BDB-8441-C02D25AD90E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C64066AD-3D5D-4BDB-8441-C02D25AD90E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63B27F85-F6EA-429D-8767-82FF3553CA27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63B27F85-F6EA-429D-8767-82FF3553CA27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63B27F85-F6EA-429D-8767-82FF3553CA27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63B27F85-F6EA-429D-8767-82FF3553CA27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{31ABDD25-4E4C-40BD-97C3-DFC3538A0DC3} = {14142085-D958-46F4-BDAF-D43899714ABD}
+		{DD639927-088F-4CE2-BA0F-17092826C120} = {31ABDD25-4E4C-40BD-97C3-DFC3538A0DC3}
+		{E6B011AE-6DBE-476D-8099-B0A296F64E18} = {14142085-D958-46F4-BDAF-D43899714ABD}
+		{1D7F1AAF-1EF8-4400-A596-6504E3DA2556} = {E6B011AE-6DBE-476D-8099-B0A296F64E18}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {459BA039-4757-4318-91A7-CCDA75921C45}
+	EndGlobalSection
+EndGlobal
