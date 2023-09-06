@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{C64066AD-3D5D-4BDB-8441-C02D25AD90E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{C64066AD-3D5D-4BDB-8441-C02D25AD90E9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dependencies", "Dependencies\Dependencies.csproj", "{63B27F85-F6EA-429D-8767-82FF3553CA27}"
 EndProject
@@ -29,6 +29,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{1D7F
 		ReleaseNotes\2.0.0\Scripts\script002 - modify table.sql = ReleaseNotes\2.0.0\Scripts\script002 - modify table.sql
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.0.0", "3.0.0", "{620E8926-6210-4294-B48E-3E8A4B8B4EFB}"
+	ProjectSection(SolutionItems) = preProject
+		ReleaseNotes\3.0.0\ReleaseOverview.md = ReleaseNotes\3.0.0\ReleaseOverview.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{311AAE52-D138-4D9D-A8AB-E6E3EA8D8FB1}"
+	ProjectSection(SolutionItems) = preProject
+		ReleaseNotes\3.0.0\Scripts\script003 - modify table.sql = ReleaseNotes\3.0.0\Scripts\script003 - modify table.sql
+		ReleaseNotes\3.0.0\Scripts\script004 - throw error.sql = ReleaseNotes\3.0.0\Scripts\script004 - throw error.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +63,8 @@ Global
 		{DD639927-088F-4CE2-BA0F-17092826C120} = {31ABDD25-4E4C-40BD-97C3-DFC3538A0DC3}
 		{E6B011AE-6DBE-476D-8099-B0A296F64E18} = {14142085-D958-46F4-BDAF-D43899714ABD}
 		{1D7F1AAF-1EF8-4400-A596-6504E3DA2556} = {E6B011AE-6DBE-476D-8099-B0A296F64E18}
+		{620E8926-6210-4294-B48E-3E8A4B8B4EFB} = {14142085-D958-46F4-BDAF-D43899714ABD}
+		{311AAE52-D138-4D9D-A8AB-E6E3EA8D8FB1} = {620E8926-6210-4294-B48E-3E8A4B8B4EFB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {459BA039-4757-4318-91A7-CCDA75921C45}

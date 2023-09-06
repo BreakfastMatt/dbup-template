@@ -1,11 +1,11 @@
-﻿namespace ConsoleApp;
-
+﻿
+using System.Reflection;
 using DbUp;
-using DbUp.Engine;
 using DbUp.ScriptProviders;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
+namespace ConsoleApp;
 public class Program
 {
   /// <summary>
@@ -23,8 +23,10 @@ public class Program
     CreateDependencyInjectionContainer(args);
 
     // Run DbUp to deploy scripts
-    var dbup = DeploySqlScripts(configurations);
-    if (dbup == false) throw new Exception("DbUp Failed");
+    DeploySqlScripts(configurations);
+
+    // Prevent application closure
+    Console.ReadLine();
   }
 
   private static void CreateDependencyInjectionContainer(string[] args)
@@ -53,18 +55,21 @@ public class Program
     return configuration;
   }
 
-  public static bool DeploySqlScripts(IConfigurationRoot? configurations)
+  public static void DeploySqlScripts(IConfigurationRoot? configurations)
   {
     // DB up configurations
     var connectionString = configurations.GetValue<string>("ConnectionStrings:DatabaseConnection");
     var scriptFolderBase = configurations.GetValue<string>("DbUp:MigrationScriptsFolder");
     var scriptOptions = new FileSystemScriptOptions { IncludeSubDirectories = true };
 
+    // Get ReleaseNotes folder path
+    var solutionFolderPath = Enumerable.Range(1, 4).Aggregate(Directory.GetCurrentDirectory(), (current, _) => Directory.GetParent(current).FullName);
+    var scriptsPath = Path.Combine(solutionFolderPath, scriptFolderBase);
+
     // Run DbUp upgrader to deploy scripts
-    Console.WriteLine("Beginning Database migrations:");
     var upgrader = DeployChanges.To
       .SqlDatabase(connectionString)
-      .WithScripts(new FileSystemScriptProvider(scriptFolderBase, scriptOptions))
+      .WithScripts(new FileSystemScriptProvider(scriptsPath, scriptOptions))
       .LogToConsole()
       .Build()
       .PerformUpgrade();
@@ -76,13 +81,13 @@ public class Program
       Console.WriteLine("Database migration failed:");
       Console.WriteLine(upgrader.Error);
       Console.ResetColor();
-      return false;
+      throw new Exception("Database migration failed");
     }
 
     // Handle DbUp Success
     Console.ForegroundColor = ConsoleColor.Green;
     Console.WriteLine("Database migration successful!");
     Console.ResetColor();
-    return true;
+    return;
   }
 }
