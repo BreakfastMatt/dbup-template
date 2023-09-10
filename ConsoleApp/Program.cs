@@ -1,6 +1,4 @@
-﻿
-using System.Reflection;
-using DbUp;
+﻿using DbUp;
 using DbUp.ScriptProviders;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
