@@ -1,10 +1,10 @@
 BEGIN TRY
-    -- Start a transaction
-    BEGIN TRANSACTION;
-
-    -- Your SQL code goes here
-    -- Use the @TestResult variable to capture the test result
+    BEGIN TRAN
+    -- Set an appropriate and descriptive error message for your script
+    DECLARE @ErrorMessage NVARCHAR(255) = 'Test failed. Transaction rolled back.';
     DECLARE @TestResult INT;
+
+    -- Your Script Goes Here
 
     -- Your measurable test script
     -- Assign 1 to @TestResult if the test passes, 0 if it fails
@@ -24,7 +24,7 @@ BEGIN TRY
     BEGIN
         -- If the test fails, roll back the transaction and raise an error
         ROLLBACK;
-        THROW 50000, 'Test failed. Transaction rolled back.', 1;
+        THROW 50000, @ErrorMessage, 1;
     END
 END TRY
 BEGIN CATCH
