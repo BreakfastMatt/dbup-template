@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dependencies", "Dependencies\Dependencies.csproj", "{63B27F85-F6EA-429D-8767-82FF3553CA27}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReleaseNotes", "ReleaseNotes", "{14142085-D958-46F4-BDAF-D43899714ABD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Release Notes", "Release Notes", "{14142085-D958-46F4-BDAF-D43899714ABD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.0.0", "1.0.0", "{31ABDD25-4E4C-40BD-97C3-DFC3538A0DC3}"
 	ProjectSection(SolutionItems) = preProject
@@ -40,6 +40,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{311A
 		ReleaseNotes\3.0.0\Scripts\script004 - throw error.sql = ReleaseNotes\3.0.0\Scripts\script004 - throw error.sql
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1AF210B9-E03C-426D-A766-99DCEA30291A}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		Script Template.sql = Script Template.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +65,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{14142085-D958-46F4-BDAF-D43899714ABD} = {1AF210B9-E03C-426D-A766-99DCEA30291A}
 		{31ABDD25-4E4C-40BD-97C3-DFC3538A0DC3} = {14142085-D958-46F4-BDAF-D43899714ABD}
 		{DD639927-088F-4CE2-BA0F-17092826C120} = {31ABDD25-4E4C-40BD-97C3-DFC3538A0DC3}
 		{E6B011AE-6DBE-476D-8099-B0A296F64E18} = {14142085-D958-46F4-BDAF-D43899714ABD}
